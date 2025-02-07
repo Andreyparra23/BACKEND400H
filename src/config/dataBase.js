@@ -1,15 +1,14 @@
-// en este archivo se usa la conexion con la base de datos
+import mongoose from 'mongoose';
 
-import mongoose  from "mongoose";
+// 2. Crearmos una función para conectar la base de datos
 
-export async function connectionMongo() {
-    //controlar errores con trycatch
-    try {
-        await mongoose.connect(process.env.DB_URL,{dbName:'ClusterLicoreraTest'});
-        console.log ('conexion exitosa con la base de datos'); 
+export async function connectionMongo(){
 
-    } catch (error) {
-        console.error ('error de conexion' + error);
+    try{
+        // conectar base de datos
+        await mongoose.connect(process.env.DB_URL,{dbName: 'ClusterLicorera'});
+        console.log('Conexión exitosa con la base de datos');
+    }catch(error){
+        console.error('Error de conexión: ' + error);
     }
-
-}
+} 

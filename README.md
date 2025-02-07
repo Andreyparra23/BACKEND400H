@@ -47,5 +47,10 @@ conexion exitosa con la base de datos.</b>
 <li>Jsonwebtoken
 
 
+Seccion pruebas:
+Se hicieron test de 2 controladores: userController, productController.
+se adjunta evidencia de los test concluidos:
+
+
 
 
